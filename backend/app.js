@@ -13,6 +13,7 @@ const app = express();
 config({path:"./config/config.env"});
 
 app.use(cors());
+app.options('*', cors()); // Include this line to handle preflight requests
 
 app.use(cookieParser());
 app.use(express.json());
